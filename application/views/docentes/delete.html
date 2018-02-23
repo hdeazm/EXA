@@ -1,0 +1,35 @@
+$def with(docentes, message)
+<h3>
+    <a href="/docentes">docentes</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_docente" id="id_docente" value="$docentes.id_docente" />
+
+    <div class="form-group">
+    <label for="nom_doc">nom_doc</label>
+    <input readonly id="nom_doc" type="text" class="form-control" name="nom_doc" size="30" value="$docentes.nom_doc"/>
+</div><div class="form-group">
+    <label for="especialidad">especialidad</label>
+    <input readonly id="especialidad" type="text" class="form-control" name="especialidad" size="30" value="$docentes.especialidad"/>
+</div><div class="form-group">
+    <label for="telefono">telefono</label>
+    <input readonly id="telefono" type="text" class="form-control" name="telefono" size="30" value="$docentes.telefono"/>
+</div><div class="form-group">
+    <label for="direccion">direccion</label>
+    <input readonly id="direccion" type="text" class="form-control" name="direccion" size="30" value="$docentes.direccion"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
